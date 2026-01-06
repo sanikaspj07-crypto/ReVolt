@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Li-ion Battery Recycling Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔋 Li-ion Battery Recycling & Awareness Portal</h1>
+    <p>Find recycling centers, learn chemical segregation, and calculate environmental impact</p>
+  </header>
+
+  <!-- Recycling Center Search -->
+  <section class="search">
+    <h2>📍 Find Nearest Recycling Center</h2>
+    <input type="text" id="searchBox" placeholder="Enter your city (e.g., Pune, Mumbai)" />
+    <button onclick="searchCenter()">Search</button>
+  </section>
+
+  <section id="results" class="results"></section>
+
+  <!-- Safety Tips -->
+  <section class="tips">
+    <h2>⚠️ Safe Disposal & Handling Tips</h2>
+    <ul>
+      <li>Never throw Li-ion batteries in household garbage or fire.</li>
+      <li>Store used batteries in a cool, dry place away from sunlight.</li>
+      <li>Recycle batteries only at authorized e-waste centers.</li>
+      <li>Cover terminals with tape before disposal to prevent short circuits.</li>
+      <li>Encourage others to follow safe recycling habits.</li>
+    </ul>
+  </section>
+
+  <!-- Chemical Segregation Visualizer -->
+  <section class="chem">
+    <h2>🧪 Chemical Segregation in Li-ion Batteries</h2>
+    <p>Click on each component to learn what chemicals are inside:</p>
+    <div class="buttons">
+      <button onclick="showChem('cathode')">Cathode</button>
+      <button onclick="showChem('anode')">Anode</button>
+      <button onclick="showChem('electrolyte')">Electrolyte</button>
+      <button onclick="showChem('separator')">Separator</button>
+    </div>
+    <div id="chem-info" class="chem-box"></div>
+  </section>
+
+  <!-- Recycling Impact Calculator -->
+  <section class="calc">
+    <h2>🌍 Recycling Impact Calculator</h2>
+    <p>Estimate how much lithium and CO₂ you save by recycling batteries!</p>
+    <input type="number" id="batteryCount" placeholder="Enter number of batteries recycled" />
+    <button onclick="calcImpact()">Calculate</button>
+    <div id="impact" class="impact-box"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Li-ion Recycling Awareness | Created by SE AI&DS Students</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
